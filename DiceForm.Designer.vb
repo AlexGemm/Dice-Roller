@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class DiceForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class DiceForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DiceForm))
         Me.btnRollDFour = New System.Windows.Forms.Button()
@@ -31,6 +31,10 @@ Partial Class DiceForm
         Me.btnRollDTwelve = New System.Windows.Forms.Button()
         Me.btnRollDTwenty = New System.Windows.Forms.Button()
         Me.btnRollDHundred = New System.Windows.Forms.Button()
+        Me.YouRolled = New System.Windows.Forms.Label()
+        Me.dicePool = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.btnSub = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnRollDFour
@@ -48,10 +52,11 @@ Partial Class DiceForm
         '
         Me.CalcLabel.AutoSize = True
         Me.CalcLabel.BackColor = System.Drawing.Color.Transparent
-        Me.CalcLabel.Font = New System.Drawing.Font("Quicksand", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.CalcLabel.Location = New System.Drawing.Point(367, 55)
+        Me.CalcLabel.Font = New System.Drawing.Font("Quicksand", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.CalcLabel.ForeColor = System.Drawing.SystemColors.Control
+        Me.CalcLabel.Location = New System.Drawing.Point(416, 20)
         Me.CalcLabel.Name = "CalcLabel"
-        Me.CalcLabel.Size = New System.Drawing.Size(33, 40)
+        Me.CalcLabel.Size = New System.Drawing.Size(34, 40)
         Me.CalcLabel.TabIndex = 1
         Me.CalcLabel.Text = "0"
         '
@@ -121,13 +126,63 @@ Partial Class DiceForm
         Me.btnRollDHundred.Text = "Roll 1d100"
         Me.btnRollDHundred.UseVisualStyleBackColor = False
         '
+        'YouRolled
+        '
+        Me.YouRolled.AutoSize = True
+        Me.YouRolled.Font = New System.Drawing.Font("Quicksand", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.YouRolled.ForeColor = System.Drawing.SystemColors.Control
+        Me.YouRolled.Location = New System.Drawing.Point(306, 30)
+        Me.YouRolled.Name = "YouRolled"
+        Me.YouRolled.Size = New System.Drawing.Size(115, 28)
+        Me.YouRolled.TabIndex = 8
+        Me.YouRolled.Text = "You Rolled:"
+        '
+        'dicePool
+        '
+        Me.dicePool.BackColor = System.Drawing.Color.MintCream
+        Me.dicePool.Location = New System.Drawing.Point(333, 64)
+        Me.dicePool.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.dicePool.Name = "dicePool"
+        Me.dicePool.Size = New System.Drawing.Size(102, 28)
+        Me.dicePool.TabIndex = 9
+        Me.dicePool.Text = "Roll Multiple"
+        Me.dicePool.UseVisualStyleBackColor = False
+        '
+        'btnAdd
+        '
+        Me.btnAdd.BackColor = System.Drawing.Color.MintCream
+        Me.btnAdd.Location = New System.Drawing.Point(525, 30)
+        Me.btnAdd.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(34, 28)
+        Me.btnAdd.TabIndex = 10
+        Me.btnAdd.Text = "+"
+        Me.btnAdd.UseCompatibleTextRendering = True
+        Me.btnAdd.UseVisualStyleBackColor = False
+        '
+        'btnSub
+        '
+        Me.btnSub.BackColor = System.Drawing.Color.MintCream
+        Me.btnSub.Location = New System.Drawing.Point(485, 30)
+        Me.btnSub.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnSub.Name = "btnSub"
+        Me.btnSub.Size = New System.Drawing.Size(34, 28)
+        Me.btnSub.TabIndex = 11
+        Me.btnSub.Text = "-"
+        Me.btnSub.UseCompatibleTextRendering = True
+        Me.btnSub.UseVisualStyleBackColor = False
+        '
         'DiceForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Teal
+        Me.BackColor = System.Drawing.Color.Indigo
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(800, 540)
+        Me.Controls.Add(Me.btnSub)
+        Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.dicePool)
+        Me.Controls.Add(Me.YouRolled)
         Me.Controls.Add(Me.btnRollDHundred)
         Me.Controls.Add(Me.btnRollDTwenty)
         Me.Controls.Add(Me.btnRollDTwelve)
@@ -155,4 +210,8 @@ Partial Class DiceForm
     Friend WithEvents btnRollDTwelve As Button
     Friend WithEvents btnRollDTwenty As Button
     Friend WithEvents btnRollDHundred As Button
+    Friend WithEvents YouRolled As Label
+    Friend WithEvents dicePool As Button
+    Friend WithEvents btnAdd As Button
+    Friend WithEvents btnSub As Button
 End Class
